@@ -41,5 +41,7 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>写真のアップロードを可能にする為にアクセスを許可してください。</string>
 </dict>
 </plist>
