@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 void main() {
   runApp(MyApp());
@@ -51,12 +50,8 @@ class _MyHomePageState extends State<MyHomePage> {
   final picker = ImagePicker();
   int _counter = 0;
 
-  void _incrementCounter() async  {
+  void _incrementCounter() async {
     try {
-      final status = await Permission.photos.request();
-      if (!status.isGranted) {
-        return;
-      }
       final pickedFile = await picker.getImage(source: ImageSource.gallery);
       print('pickedFile: $pickedFile');
     } catch (error) {
